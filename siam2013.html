@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Reproducibility and computationally intensive, data-driven research - Jarrod Millman</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="Jarrod Millman" />
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Reproducibility and computationally intensive, data-driven research"/>
+            <meta property="og:url" content="http://www.jarrodmillman.com/siam2013.html"/>
+            <meta property="og:description" content="A mini-symposium at the SIAM Conference on Computational Science &amp; Engineering in Boston, MA on February 28, 2013. Summary Since Jon Claerbout adopted and started promoting reproducible research practices much has changed. While the problems for reproducibility of computational results have grown in conjunction with increases in computing power and storage ..."/>
+            <meta property="article:published_time" content="2013-02-28" />
+                <meta property="article:section" content="misc" />
+                <meta property="article:author" content="Jarrod Millman" />
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://www.jarrodmillman.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://www.jarrodmillman.com/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://www.jarrodmillman.com/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.jarrodmillman.com/theme/css/style.css" type="text/css"/>
+
+        <link href="http://www.jarrodmillman.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Jarrod Millman ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://www.jarrodmillman.com/" class="navbar-brand">
+Jarrod Millman            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="http://www.jarrodmillman.com/cv.pdf">CV</a></li>
+                    <li><a href="http://scholar.google.com/citations?user=RH1sMcQAAAAJ">Publications</a></li>
+                         <li><a href="http://www.jarrodmillman.com/pages/teaching.html">
+                             Teaching
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://www.jarrodmillman.com/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://www.jarrodmillman.com/siam2013.html"
+                       rel="bookmark"
+                       title="Permalink to Reproducibility and computationally intensive, data-driven research">
+                        Reproducibility and computationally intensive, data-driven research
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2013-02-28T00:00:00"> Thu 28 February 2013</time>
+    </span>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>A mini-symposium at the <a href="http://www.siam.org/meetings/cse13">SIAM Conference on Computational Science &amp;
+Engineering</a> in Boston, MA on
+February 28, 2013.</p>
+<h2>Summary</h2>
+<p>Since Jon Claerbout adopted and started promoting reproducible research
+practices much has changed. While the problems for reproducibility of
+computational results have grown in conjunction with increases in
+computing power and storage densities, there has also been a steady
+growth in awareness of these problems and strategies to address them. In
+this minisymposium, we will discuss several recent attempts to come to
+terms with reproducibility in computational research. Topics will
+include education, publication, forensics and scientific integrity, as
+well as new technologies for provenance tracking and literate
+programming.</p>
+<h2>MS205 - Part I of II</h2>
+<p><strong>Introduction</strong> 
+(<a href="http://www.jarrodmillman.com/talks/siam2013/ms205/cse-feb282013-millman.pdf">slides</a>)
+and <strong>ICERM report</strong> (<a href="http://www.jarrodmillman.com/talks/siam2013/ms205/cse-feb282013-carey.pdf">slides</a>)</p>
+<ul>
+<li><a href="http://jarrodmillman.com">K. Jarrod Millman</a>, University of
+    California, Berkeley, USA</li>
+<li>Vincent J. Carey Harvard University, USA</li>
+</ul>
+<p><strong>Reproducible Research on the Web: From Homework, Blogging to Open
+Journals</strong>
+(<a href="http://www.jarrodmillman.com/talks/siam2013/ms205/cse-feb282013-yihui-xie.html">slides</a>)</p>
+<ul>
+<li>Yihui Xie, Iowa State University, USA</li>
+</ul>
+<p>Reproducible research used to be tied to $\LaTeX{}$ (e.g. Sweave in R)
+for statisticians, which has a steep learning curve and lacks many
+features of the web. The underlying idea of literate programming,
+however, is language agnostic. In this talk, we introduce the R package
+<strong>knitr</strong> as a general-purpose tool for reproducible research, with
+an emphasis on dynamic report generation on the web with Markdown,
+including reproducible homework, blog posts and online journals in
+statistics.</p>
+<p><strong>Rethinking How we Work with Documents</strong></p>
+<ul>
+<li>Duncan W. Temple Lang, University of California, Davis, USA</li>
+</ul>
+<p>Reproducible research tools require capturing all of the different avenues and
+lines of exploration in research. The document should be a database that can be
+rendered in different ways for different audiences, allowing dynamic results
+replacing code, enabling reader interactivity to explore different approaches
+and what-ifs. We also want to be able to programmatically query, update and
+verify this document database. All of this leads us to a different structure
+and approach for authoring documents.</p>
+<p><strong>Reproducible Research in Graduate Education in the Computational
+Sciences</strong></p>
+<ul>
+<li>Sorin Mitran, University of North Carolina at Chapel Hill, USA</li>
+</ul>
+<p>Instilling good habits of reproducible computational research can be
+woven throughout graduate student education. Current software tools
+allow drafting of live documents that contain theoretical derivations,
+generation of computational code, verifiable execution of code, and
+preparation of reports. The talk presents experience in this approach in
+graduate courses at UNC.</p>
+<h2>MS224 - Part II of II</h2>
+<p><strong>Publishing Reproducible Research: Thoughts on Journal Policy</strong></p>
+<ul>
+<li>Roger Peng, Johns Hopkins Bloomberg School of Public Health</li>
+</ul>
+<p>I will also discuss the role that journals can play in encouraging
+reproducible research and will review the recent reproducibility policy
+at the journal Biostatistics.</p>
+<p><strong>Disseminating Reproducible Computational Research: Tools, Innovations,
+and Best Practices</strong>
+(<a href="http://www.jarrodmillman.com/talks/siam2013/ms224/cse-feb282013-stodden.pdf">slides</a>)</p>
+<ul>
+<li><a href="http://www.stanford.edu/~vcs/">Victoria Stodden</a>, Columbia
+    University, USA</li>
+</ul>
+<p>Computation is now widely recognized as central to the scientific
+enterprise, and numerous efforts are emerging to incorporate code and
+data sharing into standards of research dissemination. This goal is
+challenging from a number of perspectives, including effective research
+practices. In this talk I discuss novel innovations and best practices
+for facilitating code and data sharing, both at the time of publication
+and during the research itself, that support the underlying rational of
+reproducible research.</p>
+<p><strong>A Portrait of One Scientist as a Graduate Student</strong></p>
+<ul>
+<li>Paul Ivanov, Redwood Center for Theoretical Neuroscience, University of California, Berkeley
+(<a href="http://www.jarrodmillman.com/talks/siam2013/ms224/cse-feb282013-ivanov.html">slides</a>)</li>
+</ul>
+<p>In this talk, I will focus on the <em>how</em> of reproducible research. I will
+focus on specific tools and techniques I have found invaluable in doing
+research in a reproducible manner. In particular, I will cover the following
+general topics (with specific examples in parentheses): version controland code
+provenance (git), code verification (test driven development, nosetests), data
+integrity (sha1, md5, git-annex), seed saving ( random seed retention )
+distribution of datasets (mirroring, git-annex, metalinks), light-weight
+analysis capture ( ttyrec, ipython notebook)</p>
+<p><strong>Reproducible Research and Omics: Thoughts from the IOM Review</strong></p>
+<ul>
+<li>Keith A. Baggerly, Department of Bioinformatics and Computational Biology, UT MD Anderson Cancer Center
+(<a href="http://www.jarrodmillman.com/talks/siam2013/ms224/cse-feb282013-baggerly.pdf">slides</a>)</li>
+</ul>
+<p>Between 2007 and 2010, several genomic "signatures" were used to guide patient
+therapy in clinical trials in cancer. Unfortunately, the signatures were wrong,
+and trials proceeded despite warnings to this effect. The Institute of Medicine
+(IOM) subsequently reviewed the level of evidence that should be required in
+such situations. Many recommendations focus on reproducibility and data
+integrity, including directives to funders, journals, and regulatory agencies.
+We briefly review the report and implications for reproducible research.</p><script type= "text/javascript">
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+</script>
+
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3 well well-sm" id="sidebar">
+
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+                  <ul class="list-group" id="social">
+                    <li class="list-group-item"><a href="http://github.com/jarrodmillman"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+                  </ul>
+                </li>
+
+
+
+
+        </ul>
+    </section>
+
+</aside>        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 K. Jarrod Millman
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://www.jarrodmillman.com/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://www.jarrodmillman.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://www.jarrodmillman.com/theme/js/respond.min.js"></script>
+
+</body>
+</html>
