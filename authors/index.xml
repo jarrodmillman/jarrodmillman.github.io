@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Jarrod Millman</title>
+    <link>/authors/</link>
+      <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Authors</title>
+      <link>/authors/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>/authors/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/admin/</guid>
+      <description>&lt;p&gt;I am a PhD candidate in biostatistics at UC Berkeley.
+&lt;!--
+and a fellow at
+the [Berkeley Institute for Data Science](https://bids.berkeley.edu/).
+--&gt;
+I received a BA in mathematics and computer science from Cornell University in
+1998.
+After working at the &lt;a href=&#34;https://neuroscience.ucdavis.edu/&#34; target=&#34;_blank&#34;&gt;Center for Neuroscience&lt;/a&gt; at UC Davis, I came to UC
+Berkeley in 2000&amp;mdash;first to design the data analysis system for the
+&lt;a href=&#34;http://bic.berkeley.edu/&#34; target=&#34;_blank&#34;&gt;Brain Imaging Center&lt;/a&gt; and then as the director of research computing for the
+&lt;a href=&#34;https://neuroscience.berkeley.edu/&#34; target=&#34;_blank&#34;&gt;Neuroscience Institute&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;At Berkeley, I cofounded the &lt;a href=&#34;https://nipy.org/&#34; target=&#34;_blank&#34;&gt;Neuroimaging in Python&lt;/a&gt; project.
+I was the &lt;a href=&#34;https://numpy.org&#34; target=&#34;_blank&#34;&gt;NumPy&lt;/a&gt; and &lt;a href=&#34;https://scipy.org&#34; target=&#34;_blank&#34;&gt;SciPy&lt;/a&gt; release manager from 2007 to 2009.
+I cofounded &lt;a href=&#34;https://numfocus.org&#34; target=&#34;_blank&#34;&gt;NumFOCUS&lt;/a&gt; and served on its board from 2011 to 2015.
+Currently, I am the release manager of &lt;a href=&#34;https://networkx.github.io&#34; target=&#34;_blank&#34;&gt;NetworkX&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In 2015, I began the biostatistics PhD program.
+I am advised by &lt;a href=&#34;https://people.eecs.berkeley.edu/~prasad/&#34; target=&#34;_blank&#34;&gt;Prasad Raghavendra&lt;/a&gt;
+and &lt;a href=&#34;https://www.stat.berkeley.edu/users/sandrine/&#34; target=&#34;_blank&#34;&gt;Sandrine Dudoit&lt;/a&gt;.
+&lt;!--
+My work focuses on linear models, high-dimensional statistics, and sum of squares
+optimization.
+--&gt;
+My interests include algorithms, scientific computing, and neuroscience.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

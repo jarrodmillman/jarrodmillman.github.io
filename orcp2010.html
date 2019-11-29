@@ -1,102 +1,464 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml">
+<html lang="en-us">
+
 <head>
-    <title>Open Research Computing in Python - Jarrod Millman</title>
-    <!-- Using the latest rendering mode for IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.6.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="K. Jarrod Millman">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="A one-day workshop on held at the Mathematical Sciences Research Institute (MSRI) in on June 25, 2010 in Berkeley, CA.
+ 09:00-09:10 Welcome Jarrod Millman and William Stein 09:10-10:10 What to demand from a Scientific Computing Language &ndash; Even if you don&rsquo;t care about computing or languages - Peter Norvig (Google) 10:10-11:00 Cython: the best of both worlds - Robert Bradshaw (Google) 11:00-11:50 Python: an ecosystem for scientific computing - Fernando Perez (UC Berkeley) 12:00-14:00 LUNCH 14:00-14:50 Python in science and engineering education in India - Prabhu Ramachandran (IIT Bombay) 14:50-15:40 Sage: creating a viable open source alternative to Magma, Maple, Mathematica, and Matlab - William Stein (University of Washington) 15:40-16:10 BREAK 16:10-17:00 The foundation for mathematical and scientific computing - Jarrod Millman (UC Berkeley) 17:00-18:00 DISCUSSION  The workshop will be held in Simon&rsquo;s auditorium at MSRI:">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/orcp2010.html">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#328cc1">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
     
 
-    <!-- Open Graph tags -->
-        <meta property="og:site_name" content="Jarrod Millman" />
-            <meta property="og:type" content="article"/>
-            <meta property="og:title" content="Open Research Computing in Python"/>
-            <meta property="og:url" content="http://www.jarrodmillman.com/orcp2010.html"/>
-            <meta property="og:description" content="A one-day workshop on held at the Mathematical Sciences Research Institute (MSRI) in on June 25, 2010 in Berkeley, CA. 09:00-09:10 Welcome Jarrod Millman and William Stein 09:10-10:10 What to demand from a Scientific Computing Language -- Even if you don&#39;t care about computing or languages ..."/>
-            <meta property="article:published_time" content="2010-06-25" />
-                <meta property="article:section" content="misc" />
-                <meta property="article:author" content="Jarrod Millman" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
 
-    <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://www.jarrodmillman.com/theme/css/bootstrap.min.css" type="text/css"/>
-    <link href="http://www.jarrodmillman.com/theme/css/font-awesome.min.css" rel="stylesheet">
+    
 
-    <link href="http://www.jarrodmillman.com/theme/css/pygments/native.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://www.jarrodmillman.com/theme/css/style.css" type="text/css"/>
+  
 
-        <link href="http://www.jarrodmillman.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Jarrod Millman ATOM Feed"/>
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/orcp2010.html">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jarrod Millman">
+  <meta property="og:url" content="/orcp2010.html">
+  <meta property="og:title" content="Open Research Computing in Python | Jarrod Millman">
+  <meta property="og:description" content="A one-day workshop on held at the Mathematical Sciences Research Institute (MSRI) in on June 25, 2010 in Berkeley, CA.
+ 09:00-09:10 Welcome Jarrod Millman and William Stein 09:10-10:10 What to demand from a Scientific Computing Language &ndash; Even if you don&rsquo;t care about computing or languages - Peter Norvig (Google) 10:10-11:00 Cython: the best of both worlds - Robert Bradshaw (Google) 11:00-11:50 Python: an ecosystem for scientific computing - Fernando Perez (UC Berkeley) 12:00-14:00 LUNCH 14:00-14:50 Python in science and engineering education in India - Prabhu Ramachandran (IIT Bombay) 14:50-15:40 Sage: creating a viable open source alternative to Magma, Maple, Mathematica, and Matlab - William Stein (University of Washington) 15:40-16:10 BREAK 16:10-17:00 The foundation for mathematical and scientific computing - Jarrod Millman (UC Berkeley) 17:00-18:00 DISCUSSION  The workshop will be held in Simon&rsquo;s auditorium at MSRI:"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2010-06-25T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2010-06-25T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/orcp2010.html"
+  },
+  "headline": "Open Research Computing in Python",
+  
+  "datePublished": "2010-06-25T00:00:00Z",
+  "dateModified": "2010-06-25T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "K. Jarrod Millman"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jarrod Millman",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/img/icon-512.png"
+    }
+  },
+  "description": "A one-day workshop on held at the Mathematical Sciences Research Institute (MSRI) in on June 25, 2010 in Berkeley, CA.\n 09:00-09:10 Welcome Jarrod Millman and William Stein 09:10-10:10 What to demand from a Scientific Computing Language \u0026ndash; Even if you don\u0026rsquo;t care about computing or languages - Peter Norvig (Google) 10:10-11:00 Cython: the best of both worlds - Robert Bradshaw (Google) 11:00-11:50 Python: an ecosystem for scientific computing - Fernando Perez (UC Berkeley) 12:00-14:00 LUNCH 14:00-14:50 Python in science and engineering education in India - Prabhu Ramachandran (IIT Bombay) 14:50-15:40 Sage: creating a viable open source alternative to Magma, Maple, Mathematica, and Matlab - William Stein (University of Washington) 15:40-16:10 BREAK 16:10-17:00 The foundation for mathematical and scientific computing - Jarrod Millman (UC Berkeley) 17:00-18:00 DISCUSSION  The workshop will be held in Simon\u0026rsquo;s auditorium at MSRI:"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Open Research Computing in Python | Jarrod Millman</title>
 
 </head>
-<body>
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="http://www.jarrodmillman.com/" class="navbar-brand">
-Jarrod Millman            </a>
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
         </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                    <li><a href="http://www.jarrodmillman.com/cv.pdf">CV</a></li>
-                    <li><a href="http://scholar.google.com/citations?user=RH1sMcQAAAAJ">Publications</a></li>
-                         <li><a href="http://www.jarrodmillman.com/pages/teaching.html">
-                             Teaching
-                          </a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://www.jarrodmillman.com/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
-            </ul>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
         </div>
-        <!-- /.navbar-collapse -->
-    </div>
-</div> <!-- /.navbar -->
+      </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-9">
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
 
-    <section id="content">
-        <article>
-            <header class="page-header">
-                <h1>
-                    <a href="http://www.jarrodmillman.com/orcp2010.html"
-                       rel="bookmark"
-                       title="Permalink to Open Research Computing in Python">
-                        Open Research Computing in Python
-                    </a>
-                </h1>
-            </header>
-            <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2010-06-25T00:00:00"> Fri 25 June 2010</time>
-    </span>
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
+  
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
 
     
-</footer><!-- /.post-info -->                    </div>
-                </div>
-                <p>A one-day workshop on held at the <a href="http://www.msri.org">Mathematical Sciences Research
+    
+    
+      <a class="navbar-brand" href="/">Jarrod Millman</a>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>News</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Open Research Computing in Python</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jun 25, 2010
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+<p>A one-day workshop on held at the <a href="http://www.msri.org" target="_blank">Mathematical Sciences Research
 Institute (MSRI)</a> in on June 25, 2010 in Berkeley,
 CA.</p>
+
 <ul>
 <li>09:00-09:10 Welcome Jarrod Millman and William Stein</li>
-<li>09:10-10:10 What to demand from a Scientific Computing Language --
-  Even if you don't care about computing or languages - Peter Norvig (Google)</li>
+<li>09:10-10:10 What to demand from a Scientific Computing Language &ndash;
+Even if you don&rsquo;t care about computing or languages - Peter Norvig (Google)</li>
 <li>10:10-11:00 Cython: the best of both worlds - Robert Bradshaw (Google)</li>
 <li>11:00-11:50 Python: an ecosystem for scientific computing - Fernando Perez (UC Berkeley)</li>
 <li>12:00-14:00 LUNCH</li>
@@ -106,40 +468,52 @@ CA.</p>
 <li>16:10-17:00  The foundation for mathematical and scientific computing - Jarrod Millman (UC Berkeley)</li>
 <li>17:00-18:00 DISCUSSION</li>
 </ul>
-<p>The workshop will be held in Simon's auditorium at MSRI:</p>
-<div class="highlight"><pre><span class="n">Simon</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">auditorium</span>
-<span class="n">Mathematical</span> <span class="n">Science</span> <span class="n">Research</span> <span class="n">Institute</span>
-<span class="mi">17</span> <span class="n">Gauss</span> <span class="n">Way</span>
-<span class="n">Berkeley</span><span class="p">,</span> <span class="n">CA</span> <span class="mi">94720</span>
-</pre></div>
 
+<p>The workshop will be held in Simon&rsquo;s auditorium at MSRI:</p>
 
-<h1>Abstracts</h1>
+<pre><code>Simon's auditorium
+Mathematical Science Research Institute
+17 Gauss Way
+Berkeley, CA 94720
+</code></pre>
+
+<h1 id="abstracts">Abstracts</h1>
+
 <p><strong>Cython: the best of both worlds</strong></p>
+
 <p>Robert Bradshaw</p>
+
 <p>Cython is an extension to the Python language that allows explicit type
-declarations and is compiled directly to C. This addresses Python's
+declarations and is compiled directly to C. This addresses Python&rsquo;s
 large overhead for numerical loops and the difficulty of efficiently
 making use of existing C and Fortran code, which Cython code can
 interact with natively. The Cython language combines the speed of C with
 the power and simplicity of the Python language.</p>
+
 <p><strong>Python: an ecosystem for scientific computing</strong></p>
+
 <p>Fernando Perez</p>
+
 <p>As the relationship between research and computing evolves, new tools
 are required that can not only treat numerical problems, but also allow
 us to solve a variety of problems involving large datasets in many
 formats, new algorithms and computational systems like databases or
 internet servers.</p>
+
 <p>I will discuss how Python provides a balance of clarity and flexibility,
 without sacrificing avenues for performance, to develop better
 computational research tools.</p>
+
 <p><strong>Python in science and engineering education in India</strong></p>
+
 <p>Prabhu Ramachandran</p>
+
 <p>The National Mission on Education through ICT (NMEICT) is a one billion
 dollar initiative launched by the Ministry of Human Resources
-Development (MHRD), Government of India. It's goal is to improve the
+Development (MHRD), Government of India. It&rsquo;s goal is to improve the
 quality of tertiary education in India. One component of the mission
 involves the spread of open source tools in collegiate education.</p>
+
 <p>In May 2009, IIT Bombay proposed a project on Free Open source Software
 for Science and Engineering Education (FOSSEE) as part of this mission.
 The project is to run for three years. One of the thrust areas of FOSSEE
@@ -151,9 +525,12 @@ research scholars and students. In this talk, we discuss what we have
 achieved until now and highlight our future plans for the project. We
 also attempt to highlight what this will do for the Python community at
 large.</p>
+
 <p><strong>Sage: creating a viable open source alternative to Magma, Maple,
 Mathematica, and Matlab</strong></p>
+
 <p>William Stein</p>
+
 <p>Sage is an open source mathematical software project that I started in
 2005, which has had over 200 contributors, about 50 active developers,
 and receives funding from NSF, Google, Microsoft, and other
@@ -161,9 +538,12 @@ organizations. The goal of the Sage project is to create a viable free
 open source alternative to Magma, Maple, Mathematica and MATLAB. I will
 describe why I started the Sage project, then give a status report about
 what Sage currently is. This paper is closely related to my
-<a href="http://wstein.org/papers/icms/icms_2010.pdf">talk</a>.</p>
+<a href="http://wstein.org/papers/icms/icms_2010.pdf" target="_blank">talk</a>.</p>
+
 <p><strong>The foundation for mathematical and scientific computing</strong></p>
+
 <p>Jarrod Millman</p>
+
 <p>William Stein, Fernando Perez, and I are founding a non-profit
 foundation for mathematical and scientific research computing. Our
 purpose is to ensure unrestricted access to the best computational tools
@@ -171,74 +551,402 @@ for research and education in mathematics, science, and engineering. Our
 aim is to do this primarily by fostering existing efforts and
 communities. The foundation will initially focus on Python, rather than
 other languages for scientific computing such as R or Scilab. Despite
-this initial focus on Python, the foundation's mission will not be
+this initial focus on Python, the foundation&rsquo;s mission will not be
 merely to promote the use of Python in science.</p>
+
 <p>As research grows increasingly dependent on computing, it becomes
 critical for our computational resources to be developed with the same
 rigor, open review and access as the results they support. For this
 reason, we will actively promote:</p>
+
 <ul>
 <li>sharing of scientific software, data and knowledge necessary for
-    reproducible research</li>
+reproducible research</li>
 <li>unrestricted access to research outcomes and educational tools</li>
 <li>open source software developed by collaborative, meritocratic
-    communities</li>
+communities</li>
 <li>academic recognition of computational developments on equal footing
-    to the publication of results</li>
+to the publication of results</li>
 <li>openly tested, validated and documented software as the basis for
-    reliable scientific outcomes</li>
+reliable scientific outcomes</li>
 <li>high standards of computational literacy in the education of
-    mathematicians, scientists and engineers</li>
+mathematicians, scientists and engineers</li>
 </ul>
-            </div>
-            <!-- /.entry-content -->
-        </article>
-    </section>
 
-        </div>
-        <div class="col-sm-3 well well-sm" id="sidebar">
-
-<aside>
-    <section>
-        <ul class="list-group list-group-flush">
-                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
-                  <ul class="list-group" id="social">
-                    <li class="list-group-item"><a href="http://github.com/jarrodmillman"><i class="fa fa-github-square fa-lg"></i> github</a></li>
-                  </ul>
-                </li>
-
-
-
-
-        </ul>
-    </section>
-
-</aside>        </div>
     </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/orcp2010.html&amp;text=Open%20Research%20Computing%20in%20Python" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/orcp2010.html&amp;t=Open%20Research%20Computing%20in%20Python" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Open%20Research%20Computing%20in%20Python&amp;body=/orcp2010.html" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/orcp2010.html&amp;title=Open%20Research%20Computing%20in%20Python" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Open%20Research%20Computing%20in%20Python%20/orcp2010.html" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/orcp2010.html&amp;title=Open%20Research%20Computing%20in%20Python" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
 </div>
-<footer>
-   <div class="container">
-      <hr>
-      <div class="row">
-         <div class="col-xs-10">&copy; 2014 K. Jarrod Millman
-            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
-            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
-            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-    Content
-  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
-</small></p>
-         </div>
-         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu29d4cdc47f3eba23c96c653394b8bde3_344872_250x250_fill_lanczos_center_2.png" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">K. Jarrod Millman</a></h5>
+      
+      <p class="card-text">My research interests include  algorithms, scientific computing, and neuroscience.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=RH1sMcQAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0002-5263-5070" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/jarrodmillman" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/cv.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
       </div>
-   </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.0e040a4c8b8532fc173c2fe4328906d0.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
 </footer>
-<script src="http://www.jarrodmillman.com/theme/js/jquery.min.js"></script>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://www.jarrodmillman.com/theme/js/bootstrap.min.js"></script>
+  </div>
+  
 
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://www.jarrodmillman.com/theme/js/respond.min.js"></script>
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
